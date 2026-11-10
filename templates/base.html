@@ -1,0 +1,11 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}Автопрайм — автомобили с пробегом{% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}"></head><body>
+<header class="header"><a class="logo" href="{{ url_for('index') }}"><span class="logo-mark">A</span> АВТОПРАЙМ</a>
+<nav><a href="{{ url_for('catalog') }}">Каталог</a><a href="{{ url_for('index') }}#about">О компании</a><a href="{{ url_for('index') }}#contacts">Контакты</a></nav>
+<div class="nav-right">{% if user %}<a href="{{ url_for('admin') if user.role in ['admin','manager'] else url_for('account') }}" class="nav-user">{{ user.full_name.split()[0] }}</a><a class="btn btn-outline small" href="{{ url_for('logout') }}">Выйти</a>{% else %}<a href="{{ url_for('login') }}" class="nav-login">Войти</a><a class="btn btn-primary small" href="{{ url_for('register') }}">Регистрация</a>{% endif %}</div>
+<button class="menu-toggle" onclick="document.body.classList.toggle('menu-open')">☰</button></header>
+<main>{% with messages=get_flashed_messages(with_categories=true) %}{% if messages %}<div class="flash-wrap">{% for cat,msg in messages %}<div class="flash {{cat}}">{{msg}}</div>{% endfor %}</div>{% endif %}{% endwith %}{% block content %}{% endblock %}</main>
+<footer id="contacts"><div class="footer-inner"><div><a class="logo light" href="{{ url_for('index') }}"><span class="logo-mark">A</span> АВТОПРАЙМ</a><p>Автомобили, которым можно доверять.</p></div><div><b>Контакты</b><p>+7 (800) 555-35-35<br>info@avtoprime.ru</p></div><div><b>Режим работы</b><p>Ежедневно: 09:00–21:00</p></div></div><div class="copyright">© 2026 Автопрайм. Демонстрационный проект.</div></footer>
+<script src="{{ url_for('static',filename='app.js') }}"></script></body></html>

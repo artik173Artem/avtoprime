@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img" aria-label="BMW 5 серии">
+<defs>
+ <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f3f5f7"/><stop offset="1" stop-color="#dce2e8"/></linearGradient>
+ <linearGradient id="paint" x2="0" y2="1"><stop stop-color="#d4d9df"/><stop offset=".42" stop-color="#69717b"/><stop offset="1" stop-color="#15191f"/></linearGradient>
+ <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#8fa4b7"/><stop offset="1" stop-color="#263746"/></linearGradient>
+ <filter id="shadow"><feGaussianBlur stdDeviation="16"/></filter>
+</defs>
+<rect width="1000" height="560" fill="url(#bg)"/>
+<circle cx="820" cy="95" r="190" fill="#fff" opacity=".34"/>
+<path d="M0 410 Q250 360 500 420 T1000 395 V560 H0Z" fill="#cbd2d9" opacity=".42"/>
+<ellipse cx="520" cy="433" rx="350" ry="42" fill="#343c45" opacity=".23" filter="url(#shadow)"/>
+<!-- wheels -->
+<circle cx="300" cy="397" r="77" fill="#161a1f"/><circle cx="300" cy="397" r="48" fill="#aab2ba"/><circle cx="300" cy="397" r="30" fill="#39434d"/><circle cx="300" cy="397" r="12" fill="#dce1e5"/>
+<circle cx="730" cy="397" r="77" fill="#161a1f"/><circle cx="730" cy="397" r="48" fill="#aab2ba"/><circle cx="730" cy="397" r="30" fill="#39434d"/><circle cx="730" cy="397" r="12" fill="#dce1e5"/>
+<!-- body -->
+<path d="M145 365 L165 295 Q190 260 285 247 L380 155 Q410 125 470 125 L655 130 Q705 135 745 185 L825 268 Q875 282 890 330 L878 390 L807 408 L795 374 Q780 315 730 315 Q680 315 665 374 L365 374 Q350 315 300 315 Q250 315 235 374 L160 390Z" fill="url(#paint)" stroke="#10151b" stroke-width="7"/>
+<path d="M300 245 L395 157 Q415 140 465 140 L520 142 L520 245Z" fill="url(#glass)" stroke="#18222c" stroke-width="8"/>
+<path d="M535 142 L650 147 Q680 150 710 190 L755 245 L535 245Z" fill="url(#glass)" stroke="#18222c" stroke-width="8"/>
+<path d="M520 145 L520 365" stroke="#161c23" stroke-width="7" opacity=".8"/>
+<path d="M170 320 Q280 295 420 300 T850 315" fill="none" stroke="#fff" stroke-width="7" opacity=".2"/>
+<path d="M815 292 L872 308 L865 332 L820 330Z" fill="#f7f1dc"/><path d="M160 310 L190 298 L184 325 L155 335Z" fill="#e9edf0"/>
+<rect x="455" y="290" width="65" height="9" rx="4" fill="#171d23"/><rect x="585" y="290" width="65" height="9" rx="4" fill="#171d23"/>
+<path d="M170 390 H865" stroke="#111820" stroke-width="8"/>
+<text x="500" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" letter-spacing="5" fill="#47525e" opacity=".8">BMW 5 СЕРИИ</text>
+</svg>
